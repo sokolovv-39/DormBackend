@@ -1,0 +1,123 @@
+<div class="container">
+    <table>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <h1>Подтверждение почты</h1>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <p class="text-1">Здравствуйте, {{ name }}!</p>
+            </td>
+        </tr>
+            <tr>
+            <td colspan="2" style="text-align: center;">
+                <p class="text-2">Для доступа к информации о Вашем новом жилье, используйте код ниже:</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <div class="code-container">
+                    <p class="code">{{ code }}</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <p>Telegram Контакты службы поддержки:</p>
+                <ul class="telegram-contacts">
+                    <li><a href="https://t.me/Sybescane">@Sybescane</a></li>
+                    <li><a href="https://t.me/sokolovv_39">@sokolovv_39</a></li>
+                    <li><a href="https://t.me/goodzone_z">@goodzone_z</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <p class="support">С уважением,<br>Администрация общежитий НИТУ МИСИС</p>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<style>
+    *{
+    margin: 5px;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    }
+
+    body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .text-1{
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .text-2{
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .code-container {
+        margin: 10px 0;
+        padding: 0 auto;
+    }
+
+    .code {
+        display: inline-block;
+        color: white;
+        align-items: center;
+        background-color:#1D92F8;
+        padding: 8px 65px;
+        border-radius: 8px;
+        font-size: 26px;
+        letter-spacing: 1px;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        padding-left: 40px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-top: 2px solid #1D92F8;
+        border-bottom: 2px solid #1D92F8;
+    }
+
+    p {
+        color: #333333;
+        font-size: 16px;
+    }
+
+    .support {
+        color: #888888;
+        font-size: 14px;
+    }
+
+    .telegram-contacts li {
+        list-style-type: none;
+        margin-bottom: 3px; /* Уменьшение отступа снизу */
+    }
+
+    .telegram-contacts li a {
+        color: black; /* Черный цвет контактов */
+        font-size: 14px; /* Уменьшение размера контактов */
+        text-decoration: none;
+    }
+</style>

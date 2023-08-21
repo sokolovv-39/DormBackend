@@ -1,0 +1,138 @@
+<div class="container">
+    <table>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <h1>Поздравляем с завершением регистрации!</h1>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <p class="text-1">Ждем вас на заселение: {{recordDatetime}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <p class="text-2">Общежитие {{dormitory.name}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <p class="text-2">{{dormitory.address }}</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <p class="text-2">Не забудьте взять необходимые документы:</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <a
+                    class="text-2">https://misis.ru/applicants/accommodation/zaselenievobsh_ezhitiepervokusn/neobhodimyedokumenty/</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <p>Контакты службы поддержки:</p>
+            </td>
+        </tr>
+        {{#each contacts}} <tr>
+            <td>
+                <p>{{position}}, {{fullname}}</p>
+            </td>
+            <td>
+                <p>{{phone}}</p>
+            </td>
+        </tr> {{/each}}
+        <tr>
+            <td colspan="2">
+                <p class="support">С уважением,<br>Администрация общежитий НИТУ МИСИС</p>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<style>
+    * {
+        margin: 5px;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    
+    body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 5px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .text-1 {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .text-2 {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .code-container {
+        margin: 10px 0;
+        padding: 0 auto;
+    }
+
+    .code {
+        display: inline-block;
+        color: white;
+        align-items: center;
+        background-color: #1D92F8;
+        padding: 8px 65px;
+        border-radius: 8px;
+        font-size: 26px;
+        letter-spacing: 1px;
+    }
+
+    .container {
+        max-width: 750px;
+        margin: 0 auto;
+        padding: 20px;
+        padding-left: 40px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-top: 2px solid #1D92F8;
+        border-bottom: 2px solid #1D92F8;
+    }
+
+    p {
+        color: #333333;
+        font-size: 16px;
+    }
+
+    .support {
+        color: #888888;
+        font-size: 14px;
+    }
+
+    .telegram-contacts li {
+        list-style-type: none;
+        margin-bottom: 3px;
+        /* Уменьшение отступа снизу */
+    }
+
+    .telegram-contacts li a {
+        color: black;
+        /* Черный цвет контактов */
+        font-size: 14px;
+        /* Уменьшение размера контактов */
+        text-decoration: none;
+    }
+</style>
