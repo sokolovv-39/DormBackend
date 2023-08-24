@@ -2,6 +2,6 @@ export enum EducationLevelEnum {
     bachelor = 'Бакалавр',
     magister = 'Магистр',
     aspirant = 'Аспирант',
-    listener = 'Слушатель',
-    specialist = 'Специалист'
+    specialist = 'Специалист',
+    preparatory = 'Под.отделение',
 }

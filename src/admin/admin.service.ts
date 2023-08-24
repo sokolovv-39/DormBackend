@@ -68,8 +68,8 @@ export class AdminService {
   }
 
   async parseFromExcel(){
-    const workbook: WorkBook = readFile("src/files/RASPRED.xlsx");
-    const worksheet = workbook.Sheets[workbook.SheetNames[1]];
+    const workbook: WorkBook = readFile("src/files/LIST.xlsx");
+    const worksheet = workbook.Sheets[workbook.SheetNames[0]];
     const jsonData = utils.sheet_to_json(worksheet, { header: 1 });
 
     const headers = Object.values(jsonData[0]);
@@ -84,7 +84,7 @@ export class AdminService {
     });
 
     for(const obj of result){
-      if(obj['Рег.номер'] != undefined && obj['Нуждаемость в общежитии'] != undefined){
+      if(obj['Номер ЛД'] != undefined && obj['Рекомендуемое общежитие (выпадающий список)'] != undefined){
         const user = await this.userService.getUserFromObject(obj)
         await this.userService.save(user)
       }

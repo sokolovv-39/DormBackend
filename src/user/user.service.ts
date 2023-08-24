@@ -164,27 +164,21 @@ export class UserService {
   }
 
   async getUserFromObject(item: any){
-    const oldUser = await this.findOneByPersonalNumber(item['Рег.номер'])
+    const oldUser = await this.findOneByPersonalNumber(item['Номер ЛД'])
     let newUser = this.userRepository.create()
     if(oldUser != null){
       newUser = oldUser
     }
     newUser.fullname = item['ФИО']
-    newUser.personalNumber = parseInt(item['Рег.номер'])
+    newUser.personalNumber = parseInt(item['Номер ЛД'])
     newUser.gender = item['Пол'] as Gender ?? null
-    // if(Gender.female == item['Пол']){
-    //   newUser.gender = item['Пол']
-    // }
-    // else if(Gender.male == item['Пол']){
-    //   newUser.gender = item['Пол']
-    // }
     newUser.citizenship = item['Гражданство']
     newUser.faculty = item['Подразделение']
     newUser.phone = item['Телефон']
     newUser.educationLevel = item['Уровень подготовки'] as EducationLevelEnum
-    if(item["Рекомендуемое общежитие"] != null){
+    if(item["Рекомендуемое общежитие (выпадающий список)"] != null){
       newUser.dormitory = await this.dormRepository.findOneBy({
-        name: item['Рекомендуемое общежитие']
+        name: item['Рекомендуемое общежитие (выпадающий список)']
       });
     }
     else{
