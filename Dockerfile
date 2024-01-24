@@ -3,4 +3,9 @@ WORKDIR /usr/src/DormServer
 COPY . .
 RUN npm install --force --verbose
 EXPOSE 4200
-ENTRYPOINT ["echo", "Dependencies successfully installed"]
+CMD echo "Dependencies was successfully installed" \
+&& npm run migration-run \
+&& echo "Migrations was applied" \
+&& npm run build \
+&& npm run start:prod \
+&& echo "Backend is working in prod mode"
