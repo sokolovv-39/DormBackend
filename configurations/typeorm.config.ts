@@ -4,7 +4,7 @@ import { DataSource, DataSourceOptions } from 'typeorm';
 const configService: ConfigService = new ConfigService();
 const ormConfig: DataSource = new DataSource({
   type: 'postgres',
-  host: 'localhost',
+  host: 'db',
   port: 5432,
   database: 'DormDB',
   username: 'postgres',
